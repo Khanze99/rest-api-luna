@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  db:
+    image: postgis/postgis:15-3.3
+    environment:
+      POSTGRES_USER: luna
+      POSTGRES_PASSWORD: luna
+      POSTGRES_DB: luna
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql+asyncpg://luna:luna@db:5432/luna
+      API_KEY: supersecretkey
+    volumes:
+      - .:/app
+      - /app/.venv
+
+volumes:
+  pgdata:

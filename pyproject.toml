@@ -1,0 +1,17 @@
+[project]
+name = "rest-api-luna"
+version = "1.0.0"
+description = "api"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.17.1",
+    "asyncpg>=0.30.0",
+    "fastapi[all]>=0.121.1",
+    "geoalchemy2>=0.18.0",
+    "psycopg2>=2.9.11",
+    "setuptools>=80.9.0",
+    "shapely>=2.1.2",
+    "sqlalchemy[asyncio]>=2.0.44",
+    "uvicorn[standard]",
+]
