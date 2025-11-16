@@ -6,6 +6,7 @@
 ```commandline
 git clone https://github.com/Khanze99/rest-api-luna.git
 cd rest-api-luna
+uv sync
 ```
 ### Запуск 
 ```commandline
