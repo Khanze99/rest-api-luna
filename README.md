@@ -6,11 +6,12 @@
 ```commandline
 git clone https://github.com/Khanze99/rest-api-luna.git
 cd rest-api-luna
-uv sync
 ```
 ### Запуск 
 ```commandline
+uv sync
 docker-compose up -d
+docker-compose exec api uv run alembic upgrade head
 ```
 
 ## Документация API
