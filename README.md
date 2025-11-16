@@ -35,6 +35,7 @@ ReDoc: http://localhost:8000/redoc
 
 ## Переменные окружения
 `DATABASE_URL=postgresql+asyncpg://luna:luna@db:5432/luna` - База данных
+
 `API_KEY=your-secret-key-here` - API ключ
 
 
